@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useContext, useRef } from 'react';
+=======
+import React, { useState, useEffect, useContext } from 'react';
+>>>>>>> 768bc94997bb783d14a175c83a7992a63973666d
 import { Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { FormDataContext } from '../pages/FormDataContext';
@@ -7,20 +11,27 @@ import Navbar from '../pages/Navbar';
 import Footer from '../pages/Footer';
 import View from './View';
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 768bc94997bb783d14a175c83a7992a63973666d
 const Home = () => {
   const [formEntries, setFormEntries] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const navigate = useNavigate();
   const { setViewFormData } = useContext(FormDataContext);
+<<<<<<< HEAD
   const dataCountRef = useRef(0);
 
 
+=======
+>>>>>>> 768bc94997bb783d14a175c83a7992a63973666d
 
   useEffect(() => {
     const storedEntries = localStorage.getItem('formEntries');
     if (storedEntries) {
+<<<<<<< HEAD
       const parsedEntries = JSON.parse(storedEntries);
       setFormEntries(parsedEntries);
       dataCountRef.current = parsedEntries.length;
@@ -37,37 +48,63 @@ const Home = () => {
 
 
 
+=======
+      setFormEntries(JSON.parse(storedEntries));
+    }
+  }, []);
+
+  const handleFormSubmit = (formData) => {
+    setFormEntries((prevEntries) => [...prevEntries, formData]);
+    setShowForm(false);
+  };
+
+>>>>>>> 768bc94997bb783d14a175c83a7992a63973666d
   const handleFormDelete = (index) => {
     setFormEntries((prevEntries) => {
       const updatedEntries = [...prevEntries];
       updatedEntries.splice(index, 1);
+<<<<<<< HEAD
       dataCountRef.current -= 1;
+=======
+>>>>>>> 768bc94997bb783d14a175c83a7992a63973666d
       return updatedEntries;
     });
   };
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 768bc94997bb783d14a175c83a7992a63973666d
   const handleFormView = (index) => {
     const formEntry = formEntries[index];
     setViewFormData(formEntry); // Set the form data in the context
     navigate(`view`);
   };
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 768bc94997bb783d14a175c83a7992a63973666d
   const togglePopup = () => {
     setShowForm((prevState) => !prevState);
   };
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 768bc94997bb783d14a175c83a7992a63973666d
   useEffect(() => {
     localStorage.setItem('formEntries', JSON.stringify(formEntries));
   }, [formEntries]);
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 768bc94997bb783d14a175c83a7992a63973666d
   return (
     <div>
       <style>
@@ -83,8 +120,11 @@ const Home = () => {
             z-index: 9999;
           }
 
+<<<<<<< HEAD
  
 
+=======
+>>>>>>> 768bc94997bb783d14a175c83a7992a63973666d
           .popup-inner {
             position: absolute;
             top: 50%;
@@ -96,8 +136,11 @@ const Home = () => {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
           }
 
+<<<<<<< HEAD
  
 
+=======
+>>>>>>> 768bc94997bb783d14a175c83a7992a63973666d
           .close-btn {
             position: absolute;
             top: 10px;
@@ -107,8 +150,11 @@ const Home = () => {
             font-size: 18px;
           }
 
+<<<<<<< HEAD
  
 
+=======
+>>>>>>> 768bc94997bb783d14a175c83a7992a63973666d
           .btn-delete {
             background-color: #ff0000;
             color: #fff;
@@ -120,6 +166,7 @@ const Home = () => {
         `}
       </style>
 
+<<<<<<< HEAD
 
 
       <Navbar />
@@ -132,14 +179,24 @@ const Home = () => {
             <p>Current Count: {dataCountRef.current}</p>
           </Col>
           <Col md={4} sm={6} xs={12} className="text-end">
+=======
+      <Navbar />
+
+      <Container>
+        <Row className="justify-content-start">
+          <Col md={4} sm={6} xs={12}>
+>>>>>>> 768bc94997bb783d14a175c83a7992a63973666d
             <button className="btn btn-info add-btn p-2 m-2" onClick={togglePopup}>
               Add data
             </button>
           </Col>
         </Row>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 768bc94997bb783d14a175c83a7992a63973666d
         {formEntries.length > 0 && (
           <Row>
             <Col>
@@ -179,10 +236,13 @@ const Home = () => {
           </Row>
         )}
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 768bc94997bb783d14a175c83a7992a63973666d
         {showForm && (
           <div className="popup">
             <div className="popup-inner">
@@ -199,6 +259,10 @@ const Home = () => {
   );
 };
 
+<<<<<<< HEAD
 
 
 export default Home;
+=======
+export default Home;
+>>>>>>> 768bc94997bb783d14a175c83a7992a63973666d
