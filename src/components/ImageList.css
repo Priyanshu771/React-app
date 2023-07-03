@@ -1,0 +1,29 @@
+/* ImageList.css */
+
+.search-input {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 300px;
+  }
+  
+  .image-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .image-item {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .image {
+    width: 300px;
+    height: auto;
+  }
+  
+  .image-description {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  

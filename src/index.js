@@ -6,6 +6,9 @@ import Contact from './components/Contact';
 import NotFound from './pages/NotFound';
 import Calculator from './components/Calculator';
 import View from './components/View';
+import Vegetable from './orders/Vegetable';
+import ImageList from './components/ImageList';
+import WordCount from  './components/WordCount'
 import { FormDataProvider } from './pages/FormDataContext';
 
 const App = () => {
@@ -27,6 +30,9 @@ const App = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/calculator" element={<Calculator />} />
                 <Route path="/view" element={<View />} />
+                <Route path="/order" element={<Vegetable />} />
+                <Route path="/image" element={<ImageList />} />
+                <Route path="/count" element={<WordCount />} />
                 <Route
                   path="*"
                   element={
@@ -44,6 +50,10 @@ const App = () => {
                 <Route path="/not-found" element={<NotFound />} />
                 <Route path="/calculator" element={<Calculator />} />
                 <Route path="/view" element={<Navigate to="/not-found" replace />} />
+                <Route path="/order" element={<Vegetable />} />
+                <Route path="/image" element={<ImageList />} />
+                <Route path="/count" element={<WordCount />} />
+                
               </>
             )}
           </Routes>

@@ -42,6 +42,21 @@ const Navbar = () => {
               Calculation
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/order">
+            Vegetable
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/count">
+            Alphabets
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/image">
+            ImageApi
+            </Link>
+          </li>
         </ul>
       </div>
       <ul className="navbar-nav">
